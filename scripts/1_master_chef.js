@@ -10,7 +10,7 @@ async function main() {
     console.log(`Deployer account:  ${deployer.address}`);
     // We get the contract to deploy
     const MasterChef = await ethers.getContractFactory("MasterChef");
-    const args = ["0x1dbee9C0d320c0F6752E3795FdB34AB4263D1BA0", deployer.address, "10000000000000000000", "0", "1000000000000000000000"];
+    const args = ["0x1dbee9C0d320c0F6752E3795FdB34AB4263D1BA0", deployer.address, "1000000000", "0", "1000000000"];
     const masterChef = await MasterChef.deploy(...args);
   
     console.log("MasterChef deployed to:", masterChef.address);
